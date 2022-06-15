@@ -21,25 +21,30 @@ export function SignIn() {
 
             <div className="container-images">
                 <img src={facebookLogo} alt="Facebook Logo" />
-                <img src={googleLogo} alt="Google Logo" />
+                <img src={googleLogo} alt="Google Logo" className="google-img" />
                 <img src={appleLogo} alt="Apple Logo" />
             </div>
 
-            <input
-                className="login-input"
-                placeholder="Usuário"
-                type="text"
-                id="email-input"
-            />
-              <input
-                className="login-input"
-                placeholder="Senha"
-                type="password"
-                id="password-input"
-            />
-            <SignInButton />
-            <span>ou</span>
-            <SignUpButton />
-        </div>
+            <div className="form">
+                <input
+                    className="login-input"
+                    placeholder="Usuário"
+                    type="text"
+                    id="email-input"
+                />
+                <input
+                    className="login-input"
+                    placeholder="Senha"
+                    type="password"
+                    id="password-input"
+                />
+                <SignInButton />
+                <div className="span-content">
+                    <span>ou</span>
+                </div>
+                <SignUpButton />
+            </div>
+
+            </div>
     );
 }
