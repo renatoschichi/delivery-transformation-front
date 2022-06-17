@@ -1,12 +1,13 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
 import { SignIn } from './pages/SignIn';
 import { Menu } from './components/Menu/Menu';
 
+import './styles/menu.scss'
+
 function App() {
   return (
-      <SignIn></SignIn>
-      //<Menu />
+      //<SignIn></SignIn>
+      <Menu />
   );
 }
 
