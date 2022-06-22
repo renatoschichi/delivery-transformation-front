@@ -1,5 +1,5 @@
 export function Checkout() {
     return (
-        <div>CHECKOUT</div>
+        <div>CHECKOUT SCREEN</div>
     );
 }

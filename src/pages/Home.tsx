@@ -1,7 +1,7 @@
 export function Home() {
     return (
         <div>
-            <h1>TELA HOME</h1>
+            <h1>HOME SCREEN</h1>
         </div>
     );
 }
