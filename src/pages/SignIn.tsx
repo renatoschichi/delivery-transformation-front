@@ -1,5 +1,4 @@
 import '../styles/signin.scss';
-import '../styles/global.scss';
 import '../styles/button.scss';
 import appleLogo from '../assets/images/apple-logo.png';
 import googleLogo from '../assets/images/google-symbol.png';
