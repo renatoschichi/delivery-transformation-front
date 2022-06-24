@@ -6,13 +6,11 @@ import googleLogo from '../assets/images/google-symbol.png';
 import facebookLogo from '../assets/images/facebook.png';
 import { SignInButton } from '../components/Button/SignInButton';
 import { SignUpButton } from '../components/Button/SignUpButton';
-import { Navbar } from '../components/Navbar/Navbar';
 
 export function SignIn() {
 
     return (
         <div className="container">
-        <Navbar />
             <h1>
                 Faça o login para concluir seu pedido
             </h1>

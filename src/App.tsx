@@ -1,14 +1,17 @@
 import './App.css';
+import './styles/sidebar.scss';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SignIn } from './pages/SignIn';
-import { Menu } from './components/Menu/Menu';
-
-import './styles/sidebar.scss'
-import { Sidebar } from './components/Sidebar/Sidebar';
+import { Home } from './pages/Home';
 
 function App() {
   return (
-      //<SignIn></SignIn>
-      <Sidebar />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
