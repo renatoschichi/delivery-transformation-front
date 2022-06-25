@@ -2,16 +2,20 @@ import './styles/sidebar.scss';
 import './styles/global.scss';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SignIn } from './pages/SignIn';
-import { Home } from './pages/Home';
-import { Sidebar } from './components/Sidebar/Sidebar';
+import SignInPage from './pages/SignIn';
+import HomePage from './pages/Home';
+import { initializeApp } from 'firebase/app';
+import { config } from './libs/firebase';
+import AuthRoute from './components/AuthRoute/AuthRoute';
+
+initializeApp(config.firebaseConfig);
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
+        <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} />
+        <Route path="/signin" element={<SignInPage />} />
       </Routes>
     </BrowserRouter>
   );

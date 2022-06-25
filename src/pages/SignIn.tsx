@@ -3,10 +3,31 @@ import '../styles/button.scss';
 import appleLogo from '../assets/images/apple-logo.png';
 import googleLogo from '../assets/images/google-symbol.png';
 import facebookLogo from '../assets/images/facebook.png';
-import { SignInButton } from '../components/Button/SignInButton';
 import { SignUpButton } from '../components/Button/SignUpButton';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from '@firebase/auth';
+import { useNavigate } from 'react-router';
+import { useState } from 'react';
 
-export function SignIn() {
+export interface ILoginPageProps {}
+
+const SignInPage: React.FunctionComponent<ILoginPageProps> = (props) => {
+    const auth = getAuth();
+    const navigate = useNavigate();
+    const [authing, setAuthing] = useState(false);
+
+    const signInWithGoogle = async () => {
+        setAuthing(true);
+
+        signInWithPopup(auth, new GoogleAuthProvider())
+            .then((response) => {
+                console.log(response.user.uid);
+                navigate('/');
+            })
+            .catch((error) => {
+                console.log(error);
+                setAuthing(false);
+            });
+    };
 
     return (
         <div className="container">
@@ -35,7 +56,7 @@ export function SignIn() {
                     type="password"
                     id="password-input"
                 />
-                <SignInButton />
+                <button id="signInButton" onClick={() => signInWithGoogle()} disabled={authing}>Fazer login</button>
                 <div className="span-content">
                     <span>ou</span>
                 </div>
@@ -45,3 +66,5 @@ export function SignIn() {
             </div>
     );
 }
+
+export default SignInPage;
