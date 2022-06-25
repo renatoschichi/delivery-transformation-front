@@ -7,6 +7,7 @@ import HomePage from './pages/Home';
 import { initializeApp } from 'firebase/app';
 import { config } from './libs/firebase';
 import AuthRoute from './components/AuthRoute/AuthRoute';
+import { Checkout } from './pages/Checkout';
 
 initializeApp(config.firebaseConfig);
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

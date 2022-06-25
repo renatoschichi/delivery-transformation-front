@@ -1,0 +1,57 @@
+.container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 30px;
+
+    h1 {
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        margin: 50px 0 50px 0;
+    }
+    
+    span {
+        font-size: 12px;
+    }
+}
+
+.checkout-h1 {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 50px 0 10px 0;
+    text-align: left;
+}
+
+.card {
+    text-align: left;
+    background-color: white;
+    border-color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-button {
+    color: red;
+    background-color: none;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button:hover {
+    color: red;
+    background-color: none;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button:active {
+    color: red;
+    background-color: none;
+    cursor: pointer;
+    border: none;
+}
