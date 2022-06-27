@@ -35,6 +35,19 @@
     margin-bottom: 20px;
 }
 
+.payment-type {
+    padding: 10px;
+    text-align: left;
+    background-color: white;
+    border-color: white;
+    border-radius: 10px;
+    margin: 8px 0 0 0;
+}
+
+input {
+    background-color: red;
+}
+
 .edit-button {
     color: red;
     background-color: none;

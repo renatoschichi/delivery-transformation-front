@@ -18,6 +18,8 @@ export function Checkout() {
                 <PaymentType />
             </div>
 
+            <h2 className="checkout-h1">Troco para quanto?</h2>
+
             <button type="button" id="checkout-button" className="checkout-button">Finalizar Pedido</button>
 
             </div>
