@@ -1,6 +1,4 @@
-import { Radio } from "@mui/icons-material";
-import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { FormGroup } from "@mui/material";
 
 export function PaymentType() {
     return (
