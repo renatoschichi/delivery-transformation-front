@@ -5,6 +5,9 @@ import '../styles/home.scss';
 import mrshake1 from '../assets/images/mrshake1.jpg';
 import mrshake2 from '../assets/images/mrshake2.jpg';
 import mrshake3 from '../assets/images/mrshake3.jpg';
+import mrshake4 from '../assets/images/mrshake4.jpg';
+import mrshake5 from '../assets/images/mrshake5.jpg';
+import mrshake6 from '../assets/images/mrshake6.jpg';
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { Navbar } from "../components/Navbar/Navbar";
@@ -40,7 +43,13 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                     <img src={mrshake1} alt="Mr Shake" />
                     <img src={mrshake2} alt="Mr Shake" />
                     <img src={mrshake3} alt="Mr Shake" />
+                    <img src={mrshake4} alt="Mr Shake" />
+                    <img src={mrshake5} alt="Mr Shake" />
+                    <img src={mrshake6} alt="Mr Shake" />
                   </div>
+                </div>
+                <div className="menu-supreme-line">
+                  <h3>Cardápio | Linha Supremo</h3>
                 </div>
             </div>
             {/* <button id="signOutButton" onClick={() => signOut(auth)}>Sair da conta</button> */}
