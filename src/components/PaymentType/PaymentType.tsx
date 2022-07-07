@@ -1,5 +1,6 @@
+import { Radio } from "@mui/icons-material";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
-import { pink } from "@mui/material/colors";
+import { red } from "@mui/material/colors";
 
 export function PaymentType() {
     return (
@@ -8,30 +9,18 @@ export function PaymentType() {
                 <FormGroup>
 
                 <div className="payment-type">
-                    <FormControlLabel control={<Checkbox defaultChecked sx={{
-                    color: pink[800],
-                    '&.Mui-checked': {
-                    color: pink[600],
-                    },
-                }} size="small" />} label="Dinheiro" />
+                    <input type="radio" id="money-payment" name="payment-type" value="money-payment" />
+                    <label>Dinheiro</label>
                 </div>
                 
                 <div className="payment-type">
-                    <FormControlLabel control={<Checkbox defaultChecked sx={{
-                    color: pink[800],
-                    '&.Mui-checked': {
-                    color: pink[600],
-                    },
-                }} size="small" />} label="Cartão de Débito" />
+                    <input type="radio" id="debit-card-payment" name="payment-type" value="debit-card-payment" />
+                    <label>Cartão de Débito</label>
                 </div>
                 
                 <div className="payment-type">
-                    <FormControlLabel control={<Checkbox defaultChecked sx={{
-                    color: pink[800],
-                    '&.Mui-checked': {
-                    color: pink[600],
-                    },
-                }} size="small" />} label="Cartão de Crédito" />
+                    <input type="radio" id="credit-card-payment" name="payment-type" value="credit-card-payment" />
+                    <label>Cartão de Crédito</label>
                 </div>
 
                 </FormGroup>

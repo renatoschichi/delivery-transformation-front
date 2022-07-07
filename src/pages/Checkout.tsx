@@ -20,6 +20,13 @@ export function Checkout() {
 
             <h2 className="checkout-h1">Troco para quanto?</h2>
 
+            <div className="troco">
+                <p>R$ 40,00</p>
+                <hr/>
+                <span>Não vai precisar de troco</span>
+                <input type="radio" id="troco" name="troco" value="troco" />
+            </div>
+
             <button type="button" id="checkout-button" className="checkout-button">Finalizar Pedido</button>
 
             </div>

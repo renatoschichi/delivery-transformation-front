@@ -8,6 +8,7 @@ import { initializeApp } from 'firebase/app';
 import { config } from './libs/firebase';
 import AuthRoute from './components/AuthRoute/AuthRoute';
 import { Checkout } from './pages/Checkout';
+import { Menu } from './pages/Menu';
 
 initializeApp(config.firebaseConfig);
 
@@ -15,9 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} />
+        {/* <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} /> */}
+        <Route path="/" element={<HomePage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
     </BrowserRouter>
   );
