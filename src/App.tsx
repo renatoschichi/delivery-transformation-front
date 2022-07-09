@@ -1,4 +1,3 @@
-import './styles/sidebar.scss';
 import './styles/global.scss';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
