@@ -23,6 +23,14 @@ function handleRedirectToCart() {
   window.location.href = '/carrinho';
 }
 
+function handleRedirectToUser() {
+  window.location.href = '/user';
+}
+
+function handleRedirectToContact() {
+  window.location.href = '/contato';
+}
+
 export function Sidebar() {
   const [state, setState] = React.useState({ left: false });
 
@@ -76,7 +84,7 @@ export function Sidebar() {
     </div>
     <Divider />
 
-    <div className="menu menu-2">
+    <div className="menu menu-2" onClick={handleRedirectToUser}>
     <MenuItem>
       <ListItemIcon>
         <PersonOutlineIcon fontSize="small" sx={{ color: red[500] }} />
@@ -86,7 +94,7 @@ export function Sidebar() {
     </div>
     <Divider />
 
-    <div className="menu menu-2">
+    <div className="menu menu-2" onClick={handleRedirectToContact}>
     <MenuItem>
       <ListItemIcon>
         <CallIcon fontSize="small" sx={{ color: red[500] }} />

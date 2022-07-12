@@ -9,6 +9,8 @@ import AuthRoute from './components/AuthRoute/AuthRoute';
 import { Checkout } from './pages/Checkout';
 import { Menu } from './pages/Menu';
 import Product from './pages/Product';
+import { User } from './pages/User';
+import { Contact } from './pages/Contact';
 
 initializeApp(config.firebaseConfig);
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/carrinho" element={<Menu />} />
         <Route path="/produto" element={<Product />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/contato" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
