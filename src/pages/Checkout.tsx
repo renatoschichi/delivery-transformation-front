@@ -13,7 +13,6 @@ export function Checkout() {
 
             <div className="card-container">
                 <h2 className="checkout-h1">Local de entrega</h2>
-
                 <Card />
                 <PaymentType />
             </div>
@@ -28,7 +27,6 @@ export function Checkout() {
             </div>
 
             <button type="button" id="checkout-button" className="checkout-button">Finalizar Pedido</button>
-
             </div>
     );
 }
