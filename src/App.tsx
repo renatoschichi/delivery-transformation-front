@@ -18,10 +18,10 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} /> */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/login" element={<SignInPage />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/carrinho" element={<Menu />} />
+        <Route path="/produto" element={<Product />} />
       </Routes>
     </BrowserRouter>
   );
