@@ -24,16 +24,16 @@ export default function Product() {
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Movie" />} />
             <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-    </Box>
-    </div>
+              component="form"
+              sx={{
+                '& > :not(style)': { m: 1, width: '25ch' },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField id="filled-basic" label="Filled" variant="filled" />
+            </Box>
+          </div>
         </div></>
     );
   }
