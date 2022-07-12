@@ -15,6 +15,14 @@ import { red } from '@mui/material/colors';
 
 type Anchor = 'left';
 
+function handleRedirectToMenu() {
+  window.location.href = '/';
+}
+
+function handleRedirectToCart() {
+  window.location.href = '/carrinho';
+}
+
 export function Sidebar() {
   const [state, setState] = React.useState({ left: false });
 
@@ -48,7 +56,7 @@ export function Sidebar() {
       </div>
       
   <Divider />
-  <div className="menu menu-2">
+  <div className="menu menu-2" onClick={handleRedirectToMenu}>
     <MenuItem>
       <ListItemIcon>
         <LunchDiningIcon fontSize="small" sx={{ color: red[500] }} />
@@ -58,10 +66,10 @@ export function Sidebar() {
     </div>
     <Divider />
 
-    <div className="menu menu-2">
+    <div className="menu menu-2" onClick={handleRedirectToCart}>
     <MenuItem>
       <ListItemIcon>
-        <ShoppingCartIcon fontSize="small" sx={{ color: red[500] }} />
+        <ShoppingCartIcon to="/carrinho" fontSize="small" sx={{ color: red[500] }} />
       </ListItemIcon>
       <ListItemText>Pedidos</ListItemText>
     </MenuItem>
