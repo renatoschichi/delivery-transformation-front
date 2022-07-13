@@ -4,8 +4,12 @@ import '../styles/product.scss';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box, Divider } from "@mui/material";
+import { useState } from "react";
 
 export default function Product() {
+
+  const [count, setCount] = useState(0);
+
     return (
         <><div>
             <Navbar />
@@ -36,6 +40,18 @@ export default function Product() {
               <TextField id="filled-basic" label="Observações" variant="filled" />
             </Box>
             <Divider />
+
+            <div className="add-to-cart">
+              <div className="add-to-cart-count">
+                <p onClick={() => setCount(count - 12.50)}>-</p>
+                <p>{count}</p>
+                <p onClick={() => setCount(count + 12.50)} className="plus">+</p>
+              </div>
+              <div>
+                <button onClick={() => setCount(count + 12.50)}>Adicionar R$ 12,50</button>
+              </div>
+            </div>
+
             </div>
         </div></>
     );

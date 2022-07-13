@@ -59,3 +59,39 @@
     width: 320px !important;
     margin-bottom: 20px !important;
 }
+
+.add-to-cart {
+    width: 270px;
+    display: flex ;
+    margin: auto;
+    padding: 40px 0 40px 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-to-cart-count {
+    background-color: rgb(224, 224, 224);
+    width: 100px;
+    color: black;
+    display: flex;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 10px 0 10px;
+}
+
+.plus {
+    color: red;
+}
+
+button {
+    background-color: red;
+    width: 170px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    height: 50px;
+}
