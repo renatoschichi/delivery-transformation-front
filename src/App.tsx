@@ -7,7 +7,7 @@ import { initializeApp } from 'firebase/app';
 import { config } from './libs/firebase';
 import AuthRoute from './components/AuthRoute/AuthRoute';
 import { Checkout } from './pages/Checkout';
-import { Menu } from './pages/Menu';
+import { Cart } from './pages/Cart';
 import Product from './pages/Product';
 import { User } from './pages/User';
 import { Contact } from './pages/Contact';
@@ -22,9 +22,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<SignInPage />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/carrinho" element={<Menu />} />
+        <Route path="/carrinho" element={<Cart />} />
         <Route path="/produto" element={<Product />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/perfil" element={<User />} />
         <Route path="/contato" element={<Contact />} />
       </Routes>
     </BrowserRouter>

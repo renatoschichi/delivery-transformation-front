@@ -24,7 +24,7 @@ function handleRedirectToCart() {
 }
 
 function handleRedirectToUser() {
-  window.location.href = '/user';
+  window.location.href = '/perfil';
 }
 
 function handleRedirectToContact() {
