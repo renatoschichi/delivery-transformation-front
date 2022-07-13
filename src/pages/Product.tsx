@@ -4,11 +4,17 @@ import '../styles/product.scss';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box, Divider } from "@mui/material";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function Product() {
 
   const [count, setCount] = useState(0);
+  const [price, setPrice] = useState(0);
+
+  function handleAddPrice(event: FormEvent) {
+    event.preventDefault();
+    return setPrice(price + 12.50);
+  }  
 
     return (
         <><div>
@@ -43,14 +49,16 @@ export default function Product() {
 
             <div className="add-to-cart">
               <div className="add-to-cart-count">
-                <p onClick={() => setCount(count - 12.50)}>-</p>
+                <p onClick={() => setCount(count - 1)}>-</p>
                 <p>{count}</p>
-                <p onClick={() => setCount(count + 12.50)} className="plus">+</p>
+                <p onClick={() => setCount(count + 1)} className="plus">+</p>
               </div>
               <div>
-                <button onClick={() => setCount(count + 12.50)}>Adicionar R$ 12,50</button>
+                <button onClick={handleAddPrice} className="add-price-button">Adicionar R$ 12,50</button>
               </div>
             </div>
+            
+            <p>Valor total a pagar R$ {price}</p>
 
             </div>
         </div></>
