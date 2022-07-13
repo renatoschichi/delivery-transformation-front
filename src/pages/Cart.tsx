@@ -16,6 +16,10 @@ export function Cart() {
                 <button className="add-itens-btn">Adicionar mais itens</button>
                 <h5 className="day-promotion-text">Leve também a promoção do dia</h5>
                 <Carousel />
+                <div className="cart-text-bottom">
+                    <h3>Total</h3>
+                    <h4>R$ 25,00</h4>
+                </div>
                 <button type="button" id="checkout-button" className="checkout-button">Finalizar Pedido</button>
             </div>
         </div>

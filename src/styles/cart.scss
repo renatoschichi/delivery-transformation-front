@@ -1,6 +1,6 @@
 .container-cart {
-    width: 100%;
-    margin: 10px;
+    width: 90%;
+    margin: auto;
     align-items: center;
     justify-content: center;
 }
@@ -20,4 +20,9 @@
 
 .day-promotion-text {
     color: red;
+}
+
+.cart-text-bottom {
+    display: flex;
+    justify-content: space-between;
 }
