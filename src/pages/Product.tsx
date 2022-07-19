@@ -32,7 +32,7 @@ export default function Product() {
                 id="combo-box-demo"
                 options={sabores}
                 sx={{ width: 320, m: "auto" }}
-                renderInput={(params) => <TextField {...params} label="Sabores" />} />
+                renderInput={(params) => <TextField required {...params} label="Sabores (obrigatório)" />} />
                 <Box
                   component="form"
                   sx={{
