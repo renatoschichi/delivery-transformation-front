@@ -6,15 +6,13 @@ import { Box, Divider } from "@mui/material";
 import { FormEvent, useState } from "react";
 import '../styles/product.scss';
 
+function redirectToCheckout() {
+  window.location.href = '/checkout';
+}
+
 export default function Product() {
 
-  const [count, setCount] = useState(0);
-  const [price, setPrice] = useState(0);
-
-  function handleAddPrice(event: FormEvent) {
-    event.preventDefault();
-    return setPrice(price + 12.50);
-  }  
+  const [count, setCount] = useState(1);
 
     return (
         <><div>
@@ -54,11 +52,9 @@ export default function Product() {
                 <p onClick={() => setCount(count + 1)} className="plus">+</p>
               </div>
               <div>
-                <button onClick={handleAddPrice} className="add-price-button">Adicionar R$ 12,50</button>
+                <button className="add-price-button" onClick={redirectToCheckout}>Adicionar R$ 12,50</button>
               </div>
             </div>
-            
-            <p>Valor total a pagar R$ {price}</p>
 
             </div>
         </div></>
