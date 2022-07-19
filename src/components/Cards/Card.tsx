@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
+function redirectToUserProfle() {
+    window.location.href = '/perfil';
+}
+
 const initialAddresses = [
     {
         title: "João Ribeiro",
@@ -10,8 +14,8 @@ const initialAddresses = [
         reference: "Ao lado da Center Móveis"
     },
     {
-        title: "João da silva",
-        street: "Rua tupiniqui ",
+        title: "Renato da silva",
+        street: "Rua tupiniqui",
         complement: "Apto, 2º Andar",
         reference: "Ao lado do cemitério"     
     }
@@ -42,7 +46,7 @@ export function Card() {
                     <span>Complemento: {address.complement}</span>
                     <span>Ponto de referência: {address.reference}</span>
                     {index === selectedAddress && (
-                        <p className="edit-button" id="edit-button-1">Editar</p>
+                        <p className="edit-button" id="edit-button" onClick={redirectToUserProfle}>Editar</p>
                     )}
                 </div>
             ))}
