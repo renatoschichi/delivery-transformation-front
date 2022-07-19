@@ -12,6 +12,7 @@ import Product from './pages/Product';
 import { User } from './pages/User';
 import { Contact } from './pages/Contact';
 import { SearchForUnits } from './pages/SearchForUnits';
+import { SignUp } from './pages/SignUp';
 
 initializeApp(config.firebaseConfig);
 
@@ -22,6 +23,7 @@ function App() {
         {/* <Route path="/" element={<AuthRoute><HomePage /></AuthRoute>} /> */}
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<SignInPage />} />
+        <Route path="/cadastro" element={<SignUp />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/carrinho" element={<Cart />} />
         <Route path="/produto" element={<Product />} />
