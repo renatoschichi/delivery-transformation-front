@@ -15,8 +15,8 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import '../../styles/carousel.scss';
 import 'swiper/css';
+import '../../styles/carousel.scss';
 
 export function Carousel() {
     return (

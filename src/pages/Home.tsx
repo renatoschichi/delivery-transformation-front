@@ -1,8 +1,3 @@
-import '../styles/sidebar.scss';
-import '../styles/button.scss';
-import '../styles/navbar.scss';
-import '../styles/home.scss';
-import '../styles/menucard.scss';
 import React from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { Navbar } from "../components/Navbar/Navbar";
@@ -12,6 +7,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import { red } from '@mui/material/colors';
 import { Carousel } from '../components/Carousel/Carousel';
 import { MenuCard } from '../components/MenuCard/MenuCard';
+import '../styles/sidebar.scss';
+import '../styles/button.scss';
+import '../styles/navbar.scss';
+import '../styles/home.scss';
+import '../styles/menucard.scss';
 
 export interface IHomePageProps {}
 

@@ -1,7 +1,7 @@
-import '../../src/styles/cart.scss';
 import { MenuCard } from "../components/MenuCard/MenuCard";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Carousel } from "../components/Carousel/Carousel";
+import '../../src/styles/cart.scss';
 
 function handleRedirectToMenu() {
     window.location.href = '/';

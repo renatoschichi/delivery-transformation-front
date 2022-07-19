@@ -1,8 +1,8 @@
+import '../styles/checkout.scss';
+import '../styles/button.scss';
 import React from "react";
 import { Card } from "../components/Cards/Card";
 import { PaymentType } from "../components/PaymentType/PaymentType";
-import '../styles/checkout.scss';
-import '../styles/button.scss';
 
 export function Checkout() {
     return (

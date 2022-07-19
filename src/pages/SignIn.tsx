@@ -1,5 +1,3 @@
-import '../styles/signin.scss';
-import '../styles/button.scss';
 import appleLogo from '../assets/images/apple-logo.png';
 import googleLogo from '../assets/images/google-symbol.png';
 import facebookLogo from '../assets/images/facebook.png';
@@ -7,6 +5,8 @@ import { SignUpButton } from '../components/Button/SignUpButton';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from '@firebase/auth';
 import { useNavigate } from 'react-router';
 import { useState } from 'react';
+import '../styles/signin.scss';
+import '../styles/button.scss';
 
 export interface ILoginPageProps {}
 

@@ -1,10 +1,10 @@
-import { Navbar } from "../components/Navbar/Navbar";
 import mrshake2 from '../assets/images/mrshake2.jpg';
-import '../styles/product.scss';
+import { Navbar } from "../components/Navbar/Navbar";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box, Divider } from "@mui/material";
 import { FormEvent, useState } from "react";
+import '../styles/product.scss';
 
 export default function Product() {
 
