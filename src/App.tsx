@@ -11,6 +11,7 @@ import { Cart } from './pages/Cart';
 import Product from './pages/Product';
 import { User } from './pages/User';
 import { Contact } from './pages/Contact';
+import { SearchForUnits } from './pages/SearchForUnits';
 
 initializeApp(config.firebaseConfig);
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/produto" element={<Product />} />
         <Route path="/perfil" element={<User />} />
         <Route path="/contato" element={<Contact />} />
+        <Route path="/unidades" element={<SearchForUnits />} />
       </Routes>
     </BrowserRouter>
   );
