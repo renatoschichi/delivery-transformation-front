@@ -5,6 +5,7 @@
     margin: 0 10px 10px 0;
     padding: 0 0 0 10px;
     cursor: pointer;
+    text-align: left;
 }
 
 .card-text {
@@ -29,13 +30,5 @@
 }
 
 .card-container {
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 968px) {
-    .card-container {
-        display: block;
-        justify-content: center;
-    }
+    text-align: center;
 }
