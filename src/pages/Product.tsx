@@ -6,13 +6,18 @@ import { Box, Divider } from "@mui/material";
 import { FormEvent, useState } from "react";
 import '../styles/product.scss';
 
-function redirectToCheckout() {
-  window.location.href = '/checkout';
-}
-
 export default function Product() {
 
-  const [count, setCount] = useState(1);
+  const [ count, setCount ] = useState(1);
+  const [ flavours, setFlavours ] = useState<any>(null);
+
+  function verifyValidations() {
+    if (flavours === null) {
+      alert('Adicione um sabor ao seu produto.');
+    } else {
+      window.location.href = '/checkout';
+    }
+  }
 
     return (
         <><div>
@@ -31,8 +36,12 @@ export default function Product() {
                 disablePortal
                 id="combo-box-demo"
                 options={sabores}
+                onChange={(event, newValue) => {
+                  setFlavours(newValue);
+                }}
+                value={flavours}
                 sx={{ width: 320, m: "auto" }}
-                renderInput={(params) => <TextField required {...params} label="Sabores (obrigatório)" />} />
+                renderInput={(params) => <TextField required={true} {...params} label="Sabores (obrigatório)" />} />
                 <Box
                   component="form"
                   sx={{
@@ -52,7 +61,7 @@ export default function Product() {
                 <p onClick={() => setCount(count + 1)} className="plus">+</p>
               </div>
               <div>
-                <button className="add-price-button" onClick={redirectToCheckout}>Adicionar R$ 12,50</button>
+                <button className="add-price-button" onClick={verifyValidations}>Adicionar R$ 12,50</button>
               </div>
             </div>
 
