@@ -1,8 +1,12 @@
 import mrshake1 from '../../assets/images/mrshake1.jpg';
 
+function redirectToProduct() {
+    window.location.href = '/produto';
+}
+
 export function MenuCard() {
     return (
-            <div className="menu-card">
+            <div className="menu-card" onClick={redirectToProduct}>
                 <div className="card-text">
                     <h3>Supremo Cookes com clássico</h3>
                     <span>Combinação de chocolate com pola de morango</span>

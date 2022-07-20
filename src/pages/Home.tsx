@@ -44,10 +44,13 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                     <MenuCard />
                     <MenuCard />
                     <MenuCard />
-                    <MenuCard />
                   </div>
                   <div className="card-container">
                     <MenuCard />
+                    <MenuCard />
+                    <MenuCard />
+                  </div>
+                  <div className="card-container">
                     <MenuCard />
                     <MenuCard />
                     <MenuCard />
