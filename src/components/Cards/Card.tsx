@@ -42,9 +42,9 @@ export function Card() {
                         </Grid>
                     </Box>
 
-                    <span>{address.street}</span>
-                    <span>Complemento: {address.complement}</span>
-                    <span>Ponto de referência: {address.reference}</span>
+                    <span className="card-span-1"><strong>Endereço: </strong>{address.street}. </span>
+                    <span className="card-span-1"><strong>Complemento: </strong>{address.complement}. </span>
+                    <span className="card-span-1"><strong>Ponto de referência: </strong>{address.reference}.</span>
                     {index === selectedAddress && (
                         <p className="edit-button" id="edit-button" onClick={redirectToUserProfle}>Editar</p>
                     )}
