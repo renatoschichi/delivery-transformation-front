@@ -38,9 +38,9 @@ const SignInPage: React.FunctionComponent<ILoginPageProps> = (props) => {
             <span>entrar com:</span>
 
             <div className="container-images">
-                <img src={facebookLogo} alt="Facebook Logo" />
-                <img src={googleLogo} alt="Google Logo" className="google-img" />
-                <img src={appleLogo} alt="Apple Logo" />
+                <img src={facebookLogo} alt="Facebook Logo" className="img" />
+                <img src={googleLogo} alt="Google Logo" className="img google-img" />
+                <img src={appleLogo} alt="Apple Logo" className="img" />
             </div>
 
             <div className="form">
