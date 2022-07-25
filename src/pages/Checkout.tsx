@@ -4,10 +4,6 @@ import React, { useState } from "react";
 import { Card } from "../components/Cards/Card";
 import { FormGroup } from "@mui/material";
 
-function handleShowChange() {
-
-}
-
 export function Checkout() {
 
     const [ payment, setPayment ] = useState<any>('');
@@ -22,7 +18,7 @@ export function Checkout() {
                 <h2 className="checkout-h1">Local de entrega</h2>
                 <Card />
 
-                <div>
+                <div className="ways-of-payment">
                     <h3 className="checkout-h1">Formas de Pagamento</h3>
                     <FormGroup>
                     <div className="payment-type">
@@ -30,11 +26,11 @@ export function Checkout() {
                         <label>Dinheiro</label>
                     </div>
                     <div className="payment-type">
-                        <input type="radio" id="debit-card-payment" name="payment-type" value="debit-card-payment" />
+                        <input type="radio" id="debit-card-payment" name="payment-type" value="debit-card-payment" onClick={() => setPayment('')} />
                         <label>Cartão de Débito</label>
                     </div>
                     <div className="payment-type">
-                        <input type="radio" id="credit-card-payment" name="payment-type" value="credit-card-payment" />
+                        <input type="radio" id="credit-card-payment" name="payment-type" value="credit-card-payment" onClick={() => setPayment('')} />
                         <label>Cartão de Crédito</label>
                     </div>
                     </FormGroup>
@@ -42,18 +38,19 @@ export function Checkout() {
 
             </div>
 
-            <h2 className="checkout-h1">Troco para quanto?</h2>
-
             {payment == 'money' && (
-                <div className="troco">
-                    <div className="troco-1">
-                        <p>R$ 40,00</p>
-                        <input type="radio" id="troco" name="troco" value="troco" className="input-checkout-camp" />
-                    </div>
-                    <hr/>
-                    <span>Não vai precisar de troco</span>
-                    <input type="radio" id="troco" name="troco" value="troco" />
+                <React.Fragment>
+                    <h2 className="checkout-h1">Troco para quanto?</h2>
+                    <div className="troco">
+                        <div className="troco-1">
+                            <p>R$ 40,00</p>
+                            <input type="radio" id="troco" name="troco" value="troco" className="input-checkout-camp" />
+                        </div>
+                        <hr/>
+                        <span>Não vai precisar de troco</span>
+                        <input type="radio" id="troco" name="troco" value="troco" />
                 </div>
+                </React.Fragment>
             )}
 
             <button type="button" id="checkout-button" className="checkout-button">Finalizar Pedido</button>
