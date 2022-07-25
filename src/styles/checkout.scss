@@ -82,8 +82,8 @@
     padding-bottom: 10px;
 
     p {
-        padding: 5px 0 0 15px;
-        margin-bottom: 0;
+        padding: 0 0 0 15px;
+        margin: 10px 0 0 0;
     }
 
     span {
@@ -116,9 +116,10 @@
 }
 
 .input-checkout-camp {
-    float: right;
+    margin-bottom: -10px;
 }
 
 .troco-1 {
     display: flex;
+    justify-content: space-between;
 }
