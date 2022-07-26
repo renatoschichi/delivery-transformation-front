@@ -1,6 +1,4 @@
-import appleLogo from '../assets/images/apple-logo.png';
 import googleLogo from '../assets/images/google-symbol.png';
-import facebookLogo from '../assets/images/facebook.png';
 import { SignUpButton } from '../components/Button/SignUpButton';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from '@firebase/auth';
 import { useNavigate } from 'react-router';
@@ -37,10 +35,8 @@ const SignInPage: React.FunctionComponent<ILoginPageProps> = (props) => {
 
             <span>entrar com:</span>
 
-            <div className="container-images">
-                <img src={facebookLogo} alt="Facebook Logo" className="img" />
+            <div className="container-images" onClick={() => signInWithGoogle()}>
                 <img src={googleLogo} alt="Google Logo" className="img google-img" />
-                <img src={appleLogo} alt="Apple Logo" className="img" />
             </div>
 
             <div className="form">
@@ -56,7 +52,7 @@ const SignInPage: React.FunctionComponent<ILoginPageProps> = (props) => {
                     type="password"
                     id="password-input"
                 />
-                <button id="signInButton" onClick={() => signInWithGoogle()} disabled={authing}>Fazer login</button>
+                <button id="signInButton">Fazer login</button>
                 <div className="span-content">
                     <span>ou</span>
                 </div>

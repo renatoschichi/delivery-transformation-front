@@ -1,6 +1,4 @@
-import appleLogo from '../assets/images/apple-logo.png';
 import googleLogo from '../assets/images/google-symbol.png';
-import facebookLogo from '../assets/images/facebook.png';
 import '../styles/signin.scss';
 import '../styles/button.scss';
 import { SignUpButton } from '../components/Button/SignUpButton';
@@ -17,33 +15,31 @@ export function SignUp() {
         </h1>
 
         <div className="container-images">
-            <img src={facebookLogo} alt="Facebook Logo" className="img" />
             <img src={googleLogo} alt="Google Logo" className="img google-img" />
-            <img src={appleLogo} alt="Apple Logo" className="img" />
         </div>
 
         <div className="form">
             <input
                 className="login-input"
-                placeholder="E-mail"
+                placeholder="Nome"
                 type="text"
                 id="email-input"
             />
             <input
                 className="login-input"
-                placeholder="Senha"
-                type="password"
+                placeholder="CPF"
+                type="number"
                 id="password-input"
             />
             <input
                 className="login-input"
-                placeholder="Nome"
-                type="password"
+                placeholder="E-mail"
+                type="email"
                 id="password-input"
             />
              <input
                 className="login-input"
-                placeholder="CPF"
+                placeholder="Senha"
                 type="password"
                 id="password-input"
             />
