@@ -18,6 +18,10 @@ import 'swiper/css/scrollbar';
 import 'swiper/css';
 import '../../styles/carousel.scss';
 
+function redirectToProduct() {
+    window.location.href = '/produto';
+}
+
 export function Carousel() {
     return (
         <Swiper
@@ -36,18 +40,18 @@ export function Carousel() {
             scrollbar={{ draggable: true }}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
         >
-            <SwiperSlide><img src={mrshake1} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake2} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake3} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake4} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake5} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake6} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake7} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake8} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake9} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake10} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake11} /></SwiperSlide>
-            <SwiperSlide><img src={mrshake12} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake1} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake2} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake3} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake4} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake5} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake6} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake7} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake8} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake9} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake10} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake11} onClick={redirectToProduct} /></SwiperSlide>
+            <SwiperSlide><img className="carousel-img" src={mrshake12} onClick={redirectToProduct} /></SwiperSlide>
         </Swiper>
     )
 }
