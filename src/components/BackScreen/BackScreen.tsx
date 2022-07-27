@@ -14,11 +14,11 @@ export function BackScreen() {
     return (
         <div className="backscreen-container">
 
-            <div onClick={backScreen}>
+            <div className="left-arrow" onClick={backScreen}>
                 <ArrowCircleLeftIcon />
             </div>
 
-            <div onClick={nextScreen}>
+            <div className="right-arrow" onClick={nextScreen}>
                 <ArrowCircleRightIcon />
             </div>
 

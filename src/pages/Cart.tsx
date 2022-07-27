@@ -2,6 +2,7 @@ import { MenuCard } from "../components/MenuCard/MenuCard";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Carousel } from "../components/Carousel/Carousel";
 import '../../src/styles/cart.scss';
+import { BackScreen } from './../components/BackScreen/BackScreen';
 
 function handleRedirectToMenu() {
     window.location.href = '/';
@@ -15,6 +16,7 @@ export function Cart() {
     return (
         <div>
             <Navbar />
+            <BackScreen />
             <div className="container-cart">
                 <div className="first-line">
                     <h3>Linha Supremo</h3>
