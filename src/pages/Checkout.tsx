@@ -3,6 +3,7 @@ import '../styles/button.scss';
 import React, { useState } from "react";
 import { Card } from "../components/Cards/Card";
 import { FormGroup } from "@mui/material";
+import { BackScreen } from '../components/BackScreen/BackScreen';
 
 export function Checkout() {
 
@@ -10,6 +11,7 @@ export function Checkout() {
 
     return (
         <div className="container">
+            <BackScreen />
             <h1>
                 Finalização de pedido
             </h1>

@@ -5,6 +5,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Box, Divider } from "@mui/material";
 import { FormEvent, useState } from "react";
 import '../styles/product.scss';
+import { BackScreen } from './../components/BackScreen/BackScreen';
 
 export default function Product() {
 
@@ -22,6 +23,7 @@ export default function Product() {
     return (
         <><div>
             <Navbar />
+            <BackScreen />
             <div className="product-container">
                 <img src={mrshake2} />
                 <div className="product-text">
