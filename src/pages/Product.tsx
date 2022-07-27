@@ -16,7 +16,7 @@ export default function Product() {
     if (flavours === null) {
       alert('Adicione um sabor ao seu produto.');
     } else {
-      window.location.href = '/checkout';
+      window.location.href = '/carrinho';
     }
   }
 
