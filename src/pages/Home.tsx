@@ -12,6 +12,7 @@ import '../styles/button.scss';
 import '../styles/navbar.scss';
 import '../styles/home.scss';
 import '../styles/menucard.scss';
+import { Footer } from "../components/Footer/Footer";
 
 export interface IHomePageProps {}
 
@@ -54,6 +55,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                 </div>
             </div>
             {/* <button id="signOutButton" onClick={() => signOut(auth)}>Sair da conta</button> */}
+            <Footer />
         </div>
     );
 }
