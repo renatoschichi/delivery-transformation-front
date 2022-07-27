@@ -3,13 +3,14 @@ import { Navbar } from "../components/Navbar/Navbar";
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Box, Divider } from "@mui/material";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import '../styles/product.scss';
 import { BackScreen } from './../components/BackScreen/BackScreen';
 
 export default function Product() {
 
   const [ count, setCount ] = useState(1);
+  const [ price, setPrice ] = useState(12.5);
   const [ flavours, setFlavours ] = useState<any>(null);
 
   function verifyValidations() {
@@ -18,6 +19,16 @@ export default function Product() {
     } else {
       window.location.href = '/carrinho';
     }
+  }
+
+  const addPrice = () => {
+    setCount(count + 1)
+    setPrice(price + 12.5)
+  }
+
+  const removePrice = () => {
+    setCount(count - 1)
+    setPrice(price - 12.5)
   }
 
     return (
@@ -58,12 +69,12 @@ export default function Product() {
 
             <div className="add-to-cart">
               <div className="add-to-cart-count">
-                <p onClick={() => setCount(count - 1)}>-</p>
+                <p onClick={removePrice}>-</p>
                 <p>{count}</p>
-                <p onClick={() => setCount(count + 1)} className="plus">+</p>
+                <p onClick={addPrice} className="plus">+</p>
               </div>
               <div>
-                <button className="add-price-button" onClick={verifyValidations}>Adicionar R$ 12,50</button>
+                <button className="add-price-button" onClick={verifyValidations}>Adicionar R$ {price}</button>
               </div>
             </div>
 
