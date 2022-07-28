@@ -43,14 +43,6 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                   <h3>Cardápio | Linha Supremo</h3>
                   <div className="card-container">
                     <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
-                    <MenuCard />
                   </div>
                 </div>
             </div>
