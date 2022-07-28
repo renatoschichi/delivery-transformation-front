@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { Navbar } from "../components/Navbar/Navbar";
 import Paper from '@mui/material/Paper';
@@ -14,10 +14,24 @@ import '../styles/home.scss';
 import '../styles/menucard.scss';
 import { Footer } from "../components/Footer/Footer";
 
+const products = [
+  'laranja',
+  'banana',
+  'maçã',
+  'azeitona',
+  'acerola',
+  'kiwi',
+  'uva'
+];
+
 export interface IHomePageProps {}
 
 const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
+
     const auth = getAuth();
+    const [ search, setSearch ] = useState('');
+    const lowerSearch = search.toLowerCase();
+    const filteredProducts = products.filter((product) => product.toLowerCase().includes(lowerSearch));
 
     return (
         <div>
@@ -32,8 +46,17 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                     <SearchIcon sx={{ p: '10px', color: red[500] }} />
                     <InputBase
                       placeholder="Pesquisar"
+                      id="search-product-input"
+                      type="text"
+                      onChange={(ev) => setSearch(ev.target.value)}
+                      value={search}
                     />
                   </Paper>
+                  <ul>
+                    {filteredProducts.map((product) => (
+                      <li key={product}>{product}</li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="offers-gallery">
                   <h3>Ofertas do dia</h3>
