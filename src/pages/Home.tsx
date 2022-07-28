@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { Navbar } from "../components/Navbar/Navbar";
 import Paper from '@mui/material/Paper';
@@ -29,9 +29,13 @@ export interface IHomePageProps {}
 const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
 
     const auth = getAuth();
+
     const [ search, setSearch ] = useState('');
-    const lowerSearch = search.toLowerCase();
-    const filteredProducts = products.filter((product) => product.toLowerCase().includes(lowerSearch));
+
+    const filteredProducts = useMemo(() => {
+      const lowerSearch = search.toLowerCase();
+      return products.filter((product) => product.toLowerCase().includes(lowerSearch));
+    }, [search]) 
 
     return (
         <div>
