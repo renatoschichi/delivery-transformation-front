@@ -30,7 +30,7 @@ const productData = [
         productName: 'Sorvete com bis',
         productDetails: 'Combinação de sorvete e bis',
         productSize: 'Médio | 300ml',
-        productPrice: 'R$ 12,50',
+        productPrice: 'R$ 14,00',
         productImage: mrshake2
     },
     {
@@ -44,11 +44,11 @@ const productData = [
         productName: 'Açaí',
         productDetails: 'Açaí de banana com granola',
         productSize: 'Grande | 800ml',
-        productPrice: 'R$ 25',
+        productPrice: 'R$ 25,00',
         productImage: mrshake4
     },
     {
-        productName: 'Milk Shake de morango',
+        productName: 'Açaí com banana e granola',
         productDetails: 'Combinação de morango com leite',
         productSize: 'Médio | 500ml',
         productPrice: 'R$ 18,50',
@@ -79,7 +79,7 @@ const productData = [
         productName: 'Milk Shake de morango',
         productDetails: 'Combinação de morango com leite',
         productSize: 'Médio | 500ml',
-        productPrice: 'R$ 16',
+        productPrice: 'R$ 16,00',
         productImage: mrshake9
     },
     {
@@ -90,7 +90,7 @@ const productData = [
         productImage: mrshake10
     },
     {
-        productName: 'Milk Shake de morango',
+        productName: 'Combo Açaí + Milkshake',
         productDetails: 'Combinação de morango com leite',
         productSize: 'Pequeno | 200ml',
         productPrice: 'R$ 10,50',
@@ -100,7 +100,7 @@ const productData = [
         productName: 'Supremo',
         productDetails: 'Mega combinação entre sorvete artesanal e bis',
         productSize: 'Grande | 700ml',
-        productPrice: 'R$ 30',
+        productPrice: 'R$ 30,00',
         productImage: mrshake12
     },
 ]

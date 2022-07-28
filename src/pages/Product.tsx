@@ -27,8 +27,10 @@ export default function Product() {
   }
 
   const removePrice = () => {
-    setCount(count - 1)
-    setPrice(price - 12.5)
+    if(count > 1) {
+      setCount(count - 1)
+      setPrice(price - 12.5)
+    }
   }
 
     return (
