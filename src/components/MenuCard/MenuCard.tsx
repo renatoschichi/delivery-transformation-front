@@ -49,7 +49,7 @@ const productData = [
     },
     {
         productName: 'Açaí com banana e granola',
-        productDetails: 'Combinação de morango com leite',
+        productDetails: 'Combinação de açaí com banana e granola',
         productSize: 'Médio | 500ml',
         productPrice: 'R$ 18,50',
         productImage: mrshake5
@@ -62,7 +62,7 @@ const productData = [
         productImage: mrshake6
     },
     {
-        productName: 'Milk Shake de morango',
+        productName: 'Combo 4 shakes',
         productDetails: 'Combinação de morango com leite',
         productSize: 'Médio | 500ml',
         productPrice: 'R$ 18,50',
@@ -76,14 +76,14 @@ const productData = [
         productImage: mrshake8
     },
     {
-        productName: 'Milk Shake de morango',
-        productDetails: 'Combinação de morango com leite',
+        productName: 'Açaí clássico',
+        productDetails: 'Açaí simples',
         productSize: 'Médio | 500ml',
         productPrice: 'R$ 16,00',
         productImage: mrshake9
     },
     {
-        productName: 'Milk Shake de morango',
+        productName: 'Supremo shake',
         productDetails: 'Combinação de morango com leite',
         productSize: 'Médio | 500ml',
         productPrice: 'R$ 18,50',
