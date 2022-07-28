@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import { Card } from "../components/Cards/Card";
 import { FormGroup } from "@mui/material";
 import { BackScreen } from '../components/BackScreen/BackScreen';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 export function Checkout() {
 
     const [ payment, setPayment ] = useState<any>('');
+    const [ changePrice, setChangePrice ] = useState<any>('');
 
     return (
         <div className="container">
@@ -42,16 +44,29 @@ export function Checkout() {
 
             {payment == 'money' && (
                 <React.Fragment>
-                    <h2 className="checkout-h1">Troco para quanto?</h2>
+                    <div className="checkout-change-money-title">
+                        <h2 className="checkout-h1">Troco para quanto?</h2>
+                        <div className="change-text-title">
+                            <span>Precisa de troco</span>
+                            <input type="radio" id="troco" name="troco" value="troco" className="input-checkout-camp" onClick={() => setChangePrice('change')} />
+                        </div>
+                        <div className="change-text-title">
+                        <span>Não precisa de troco</span>
+                            <input type="radio" id="troco" name="troco" value="troco" className="input-checkout-camp" onClick={() => setChangePrice('')} />
+                        </div>
+                    </div>
+
+                    {changePrice == 'change' && (
                     <div className="troco">
                         <div className="troco-1">
-                            <p>R$ 40,00</p>
-                            <input type="radio" id="troco" name="troco" value="troco" className="input-checkout-camp" />
+                            <div>
+                                <AttachMoneyIcon className="icon-input-checkout" />
+                                <input placeholder="0,0" className="checkout-input" id="checkout-input" />
+                            </div>
                         </div>
-                        <hr/>
-                        <span>Não vai precisar de troco</span>
-                        <input type="radio" id="troco" name="troco" value="troco" />
-                </div>
+                    </div>
+                    )}
+
                 </React.Fragment>
             )}
 
