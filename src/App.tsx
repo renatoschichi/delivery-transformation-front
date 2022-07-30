@@ -11,8 +11,8 @@ import { Cart } from './pages/Cart';
 import Product from './pages/Product';
 import { User } from './pages/User';
 import { Contact } from './pages/Contact';
-import { SearchForUnits } from './pages/SearchForUnits';
 import { SignUp } from './pages/SignUp';
+import SearchForUnits from './pages/SearchForUnits';
 
 initializeApp(config.firebaseConfig);
 
