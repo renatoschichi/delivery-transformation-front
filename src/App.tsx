@@ -9,7 +9,7 @@ import AuthRoute from './components/AuthRoute/AuthRoute';
 import { Checkout } from './pages/Checkout';
 import { Cart } from './pages/Cart';
 import Product from './pages/Product';
-import { User } from './pages/User';
+import User from './pages/User';
 import { Contact } from './pages/Contact';
 import { SignUp } from './pages/SignUp';
 import SearchForUnits from './pages/SearchForUnits';
