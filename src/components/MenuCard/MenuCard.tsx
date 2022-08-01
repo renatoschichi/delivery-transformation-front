@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useState } from 'react';
 import mrshake1 from '../../assets/images/mrshake1.jpg';
 import mrshake2 from '../../assets/images/mrshake2.jpg';
@@ -105,13 +105,22 @@ const productData = [
     },
 ]
 
-export function MenuCard() {
+type IProps = {
+    search: string;
+}
 
-    const [ productInfo, setProductInfo ] = useState(productData);
+export function MenuCard({ search }: IProps ) {
+
+    const filteredProducts = useMemo(() => {
+        const lowerSearch = search.toLowerCase();
+        return productData.filter((product) => product.productName.toLowerCase().includes(lowerSearch));
+      }, [search]) 
+
+    // const [ productInfo, setProductInfo ] = useState(productData);
 
     return (
         <React.Fragment>
-            {productInfo.map((product) => (
+            {filteredProducts.map((product) => (
                 <div className="menu-card" onClick={redirectToProduct}>
                     <div className="card-text">
                         <h3>{product.productName}</h3>

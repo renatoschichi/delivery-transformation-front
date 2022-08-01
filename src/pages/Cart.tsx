@@ -21,7 +21,7 @@ export function Cart() {
                 <div className="first-line">
                     <h3>Linha Supremo</h3>
                 </div>
-                <MenuCard />
+                <MenuCard search="" />
                 <button className="add-itens-btn" onClick={handleRedirectToMenu}>Adicionar mais itens</button>
                 <h5 className="day-promotion-text">Leve também a promoção do dia</h5>
                 <Carousel />

@@ -14,16 +14,6 @@ import '../styles/home.scss';
 import '../styles/menucard.scss';
 import { Footer } from "../components/Footer/Footer";
 
-const products = [
-  'laranja',
-  'banana',
-  'maçã',
-  'azeitona',
-  'acerola',
-  'kiwi',
-  'uva'
-];
-
 export interface IHomePageProps {}
 
 const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
@@ -32,11 +22,11 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
 
     const [ search, setSearch ] = useState('');
 
-    const filteredProducts = useMemo(() => {
+/*     const filteredProducts = useMemo(() => {
       const lowerSearch = search.toLowerCase();
       return products.filter((product) => product.toLowerCase().includes(lowerSearch));
     }, [search]) 
-
+ */
     return (
         <div>
             <Navbar />
@@ -56,11 +46,6 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                       value={search}
                     />
                   </Paper>
-                  <ul>
-                    {filteredProducts.map((product) => (
-                      <li key={product}>{product}</li>
-                    ))}
-                  </ul>
                 </div>
                 <div className="offers-gallery">
                   <h3>Ofertas do dia</h3>
@@ -69,7 +54,7 @@ const HomePage: React.FunctionComponent<IHomePageProps> = (props) => {
                 <div className="menu-supreme-line">
                   <h3>Cardápio | Linha Supremo</h3>
                   <div className="card-container">
-                    <MenuCard />
+                    <MenuCard search={search} />
                   </div>
                 </div>
             </div>

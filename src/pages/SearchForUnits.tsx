@@ -27,7 +27,7 @@ function SearchForUnits() {
         }
         const cep = e.target.value.replace(/\D/g, '');
         console.log(cep);
-        fetch(`viacep.com.br/ws/${cep}/json/`)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(res => res.json()).then(data => {
             console.log(data);
             setValue('address', data.logradouro);
