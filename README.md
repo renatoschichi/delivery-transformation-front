@@ -1,3 +1,7 @@
+MrshakeWebapp is a delivery system made exclusively for Mr Shake ice cream shop. The project is made with React, typescript, react-router-dom, material ui, swiper and firebase.
+
+The project is in progress.
+
 <<<<<<< HEAD
 # delivery-transformation-front
 Repositório destinado ao projeto de delivery, inicialmente criado para o Mr. Shake 
