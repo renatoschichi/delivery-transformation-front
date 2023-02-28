@@ -1,5 +1,4 @@
-Ice Cream Delivery App
-This is a web application for ordering ice cream delivery created using ReactJS and TypeScript. The app is integrated with Firebase for user authentication and database storage. Jest was used for writing unit tests to ensure high-quality code.
+Ice Cream Delivery App is a web application for ordering ice cream delivery created using ReactJS and TypeScript. The app is integrated with Firebase for user authentication and database storage. Jest was used for writing unit tests to ensure high-quality code.
 
 To get started with the Ice Cream Delivery App, follow the steps below:
 
